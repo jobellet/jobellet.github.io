@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Joachim Bellet — Neuroscience</title>
+  <meta name="description" content="Joachim Bellet — Systems & cognitive neuroscience. Visual representations in vlPFC, decoding, and population dynamics." />
+  <meta name="author" content="Joachim Bellet" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Joachim Bellet — Neuroscience" />
+  <meta property="og:description" content="Systems & cognitive neuroscience. Visual representations in vlPFC, decoding, and population dynamics." />
+  <meta property="og:image" content="assets/og-card.jpg" />
+  <meta property="og:url" content="https://YOUR-USERNAME.github.io" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Joachim Bellet",
+    "jobTitle": "Neuroscientist",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Center for Integrative Neuroscience, Tübingen"
+    },
+    "url": "https://YOUR-USERNAME.github.io/",
+    "image": "https://YOUR-USERNAME.github.io/assets/portrait.jpg",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=YOURID",
+      "https://orcid.org/YOUR-ORCID",
+      "https://github.com/YOUR-USERNAME",
+      "https://www.linkedin.com/in/YOUR-LINKEDIN"
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="assets/favicon.ico" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #0f172a; /* slate-900 */
+      --muted: #475569; /* slate-600 */
+      --accent: #2563eb; /* blue-600 */
+      --accent-2: #0ea5e9; /* cyan-500 */
+      --card: #f8fafc; /* slate-50 */
+      --border: #e2e8f0; /* slate-200 */
+      --shadow: 0 10px 25px rgba(2, 6, 23, .08);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b0f1a;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --accent: #60a5fa;
+        --accent-2: #22d3ee;
+        --card: #0f172a;
+        --border: #1f2937;
+        --shadow: 0 10px 25px rgba(0,0,0,.35);
+      }
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: linear-gradient(180deg, var(--bg), var(--card));
+      line-height: 1.6;
+    }
+    .container { max-width: 980px; margin: 0 auto; padding: 24px; }
+    header {
+      position: sticky; top: 0; backdrop-filter: saturate(180%) blur(8px);
+      background: color-mix(in oklab, var(--bg) 80%, transparent);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 24px; max-width: 1100px; margin: 0 auto; }
+    nav a.brand { font-weight: 800; letter-spacing: .3px; text-decoration: none; color: var(--text); }
+    nav ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
+    nav a { color: var(--muted); text-decoration: none; font-weight: 600; }
+    nav a:hover { color: var(--text); }
+
+    .hero { padding: 64px 24px 24px; }
+    .hero .wrap { display: grid; grid-template-columns: 1.2fr .8fr; gap: 32px; align-items: center; }
+    .badge { display: inline-block; font-size: 12px; font-weight: 700; color: var(--accent); background: color-mix(in oklab, var(--accent) 12%, transparent); padding: 6px 10px; border-radius: 999px; letter-spacing: .3px; }
+    h1 { font-size: clamp(32px, 4vw, 52px); line-height: 1.1; margin: 12px 0 8px; }
+    .subtitle { font-size: clamp(16px, 2vw, 20px); color: var(--muted); max-width: 60ch; }
+    .cta { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn { border: 1px solid var(--border); background: var(--text); color: var(--bg); padding: 10px 14px; border-radius: 12px; font-weight: 700; text-decoration: none; box-shadow: var(--shadow); }
+    .btn.alt { background: transparent; color: var(--text); }
+    .btn:hover { transform: translateY(-1px); }
+    .portrait { border-radius: 20px; border: 1px solid var(--border); box-shadow: var(--shadow); max-width: 240px; justify-self: center; }
+
+    section { padding: 32px 24px; }
+    .section-title { font-size: 24px; margin-bottom: 10px; }
+    .section-muted { color: var(--muted); margin-top: 0; }
+
+    .cards { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+    .card { grid-column: span 12; background: var(--card); border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow); padding: 20px; }
+    .card h3 { margin-top: 0; }
+    .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .kpi { background: color-mix(in oklab, var(--card), var(--bg) 40%); border: 1px dashed var(--border); border-radius: 14px; padding: 14px; text-align: center; }
+    .kpi .big { font-size: 28px; font-weight: 800; }
+
+    .pill { display: inline-block; padding: 4px 10px; border-radius: 999px; background: color-mix(in oklab, var(--accent) 12%, transparent); color: var(--accent); font-size: 12px; font-weight: 700; margin: 2px 6px 2px 0; }
+
+    .pub-list { display: grid; gap: 14px; }
+    .pub { background: color-mix(in oklab, var(--card), var(--bg) 40%); border: 1px solid var(--border); border-radius: 14px; padding: 14px; }
+    .pub .title { font-weight: 700; }
+    .pub .venue { color: var(--muted); font-size: 14px; }
+    .pub .links { margin-top: 6px; display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 900px) {
+      .hero .wrap { grid-template-columns: 1fr; }
+      .grid-2, .grid-3, .kpis { grid-template-columns: 1fr; }
+    }
+
+    footer {
+      border-top: 1px solid var(--border); margin-top: 24px; padding: 24px; color: var(--muted); text-align: center;
+    }
+    code { background: color-mix(in oklab, var(--card), var(--bg) 40%); padding: 1px 6px; border-radius: 6px; border: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="brand" href="#">Joachim Bellet</a>
+      <ul>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#talks">Talks</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#code">Code & Data</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <span class="badge">Systems & Cognitive Neuroscience</span>
+          <h1>Visual representations in prefrontal cortex</h1>
+          <p class="subtitle">I study how neuronal populations in vlPFC encode visual information and task variables. I combine multi‑unit electrophysiology with decoding, representational geometry, and computational models of working memory and dopamine‑based learning.</p>
+          <div class="cta">
+            <a class="btn" href="#publications">View publications</a>
+            <a class="btn alt" href="assets/CV_Joachim_Bellet.pdf">Download CV</a>
+          </div>
+        </div>
+        <img class="portrait" src="assets/portrait.jpg" alt="Portrait of Joachim Bellet" />
+      </div>
+    </section>
+
+    <!-- QUICK FACTS / TAGS  -->
+    <section>
+      <div class="cards">
+        <article class="card">
+          <h3 class="section-title" id="research">Research overview</h3>
+          <p class="section-muted">Keywords: vlPFC, visual cognition, population decoding, representational similarity analysis (RSA), JAX/NumPy, logistic regression & LDA, hierarchical models.</p>
+          <div class="kpis" aria-label="highlights">
+            <div class="kpi"><div class="big">16</div><div>recording sessions</div></div>
+            <div class="kpi"><div class="big">3200</div><div>naturalistic images</div></div>
+            <div class="kpi"><div class="big">96</div><div>electrodes (Utah array)</div></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Current projects</h3>
+          <ul>
+            <li><strong>Dynamics of visual representations in vlPFC</strong> — early vs late phases, low‑SF bias, and downstream readout.</li>
+            <li><strong>Cross‑task generalization</strong> — choice vs cue color orthogonalization; decoding across WM and saccade tasks.</li>
+            <li><strong>Perception ↔ working memory transition</strong> — non‑categorisable stimuli to map the time‑course of discrimination limits.</li>
+          </ul>
+          <div>
+            <span class="pill">vlPFC</span><span class="pill">RSA</span><span class="pill">Decoding</span><span class="pill">Population analysis</span><span class="pill">JAX</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SELECTED PUBLICATIONS -->
+    <section id="publications">
+      <h2 class="section-title">Selected publications</h2>
+      <p class="section-muted">Full list on <a href="https://scholar.google.com/citations?user=YOURID">Google Scholar</a>. Replace the examples below with your own.</p>
+      <div class="pub-list">
+        <div class="pub">
+          <div class="title">Early low‑frequency visual information in vlPFC supports coarse localization and category priors</div>
+          <div class="venue">Journal of Cognitive Neuroscience — <span class="year">2025</span></div>
+          <div class="authors">J. Bellet, et al.</div>
+          <div class="links">
+            <a href="#">PDF</a>
+            <a href="#">Code</a>
+            <a href="#">Data</a>
+          </div>
+        </div>
+        <div class="pub">
+          <div class="title">Cross‑task decoding reveals orthogonal choice and cue‑color signals</div>
+          <div class="venue">bioRxiv — <span class="year">2025</span></div>
+          <div class="authors">J. Bellet, et al.</div>
+          <div class="links">
+            <a href="#">Preprint</a>
+            <a href="#">Code</a>
+          </div>
+        </div>
+      </div>
+      <details style="margin-top:12px;">
+        <summary>How to add your papers</summary>
+        <p>Duplicate a <code>div.pub</code> block and fill in <em>title</em>, <em>venue</em>, <em>authors</em>, and links. You can also link to your GitHub repos and datasets.</p>
+      </details>
+    </section>
+
+    <!-- TALKS & TEACHING -->
+    <section id="talks" class="grid-2">
+      <article class="card">
+        <h3>Talks</h3>
+        <ul>
+          <li><strong>Systems Neuroscience Symposium (SNS)</strong>, Tübingen — Oct 2025. <em>vlPFC visual dynamics</em>.</li>
+          <li><strong>CIN Lab Meeting</strong> — 2024–2025. <em>Cross‑task decoding pipeline</em>.</li>
+        </ul>
+      </article>
+      <article class="card" id="teaching">
+        <h3>Teaching & mentoring</h3>
+        <ul>
+          <li>Guest lectures on decoding & RSA (graduate level).</li>
+          <li>Mentoring on reproducible analysis (Python/JAX, Colab/Kaggle).</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- CODE & DATA -->
+    <section id="code">
+      <h2 class="section-title">Code & data</h2>
+      <p class="section-muted">Open‑source tools and analysis pipelines.</p>
+      <div class="grid-3">
+        <article class="card">
+          <h3><a href="https://github.com/YOUR-USERNAME/vlPFC_Visual_Geometry">vlPFC_Visual_Geometry</a></h3>
+          <p>Reproducible analyses: decoding (LDA/logistic), RSA, figures. Includes Colab/Kaggle auto‑detection.</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://github.com/YOUR-USERNAME/ADHD-Toolkit">ADHD Toolkit</a></h3>
+          <p>Interactive web tools (Pomodoro, quick checks) and curated resources.</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://github.com/YOUR-USERNAME">GitHub profile</a></h3>
+          <p>More projects and utilities (e.g., JAX decoding, plotting helpers).</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="grid-2">
+      <article class="card">
+        <h3>Contact</h3>
+        <p><strong>Email:</strong> <a href="mailto:joachim.bellet@uni-tuebingen.de">joachim.bellet@uni-tuebingen.de</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/YOUR-USERNAME">github.com/YOUR-USERNAME</a><br/>
+           <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=YOURID">Scholar profile</a><br/>
+           <strong>ORCID:</strong> <a href="https://orcid.org/YOUR-ORCID">YOUR-ORCID</a></p>
+        <p><strong>Address:</strong> Center for Integrative Neuroscience, University of Tübingen</p>
+      </article>
+      <article class="card">
+        <h3>Short bio</h3>
+        <p>Joachim Bellet is a neuroscientist investigating how prefrontal populations represent visual information across time. He develops decoding and representational tools to bridge systems and cognitive neuroscience.</p>
+      </article>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      © <span id="year"></span> Joachim Bellet · Built for GitHub Pages · <a href="sitemap.xml">sitemap</a>
+    </footer>
+  </main>
+
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
