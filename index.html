@@ -1,184 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Joachim Bellet – Neuroscience, Memory & Consciousness</title>
-  <!--
-    Update the metadata to reflect the broader focus on sensory memory, internal models and conscious perception.
-  -->
-  <meta name="description" content="Homepage of Joachim Bellet, neuroscientist investigating sensory memory, internal models and conscious perception." />
-  <meta property="og:title" content="Joachim Bellet – Neuroscience, Memory & Consciousness" />
-  <meta property="og:description" content="Homepage of Joachim Bellet, neuroscientist investigating sensory memory, internal models and conscious perception." />
+  <title>Joachim Bellet – Neuroscience, Memory & Consciousness</title>
+  <meta name="description"
+    content="Homepage of Joachim Bellet, neuroscientist investigating sensory memory, internal models and conscious perception." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Joachim Bellet – Neuroscience, Memory & Consciousness" />
+  <meta property="og:description"
+    content="Homepage of Joachim Bellet, neuroscientist investigating sensory memory, internal models and conscious perception." />
   <meta property="og:image" content="assets/og-card.jpg" />
   <meta property="og:type" content="website" />
+
   <link rel="icon" href="assets/favicon.ico" />
-  <style>
-    /* Base colour palette using CSS variables for light/dark theme */
-    :root {
-      --bg: #fdfdfd;
-      --text: #111827;
-      --accent: #2563eb;
-      --link: #1d4ed8;
-      --muted: #6b7280;
-      --card: #ffffff;
-      --border: #e5e7eb;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0b1120;
-        --text: #f1f5f9;
-        --accent: #3b82f6;
-        --link: #60a5fa;
-        --muted: #94a3b8;
-        --card: #1e293b;
-        --border: #334155;
-      }
-    }
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    header {
-      position: sticky;
-      top: 0;
-      backdrop-filter: blur(8px);
-      background-color: rgba(253, 253, 253, 0.8);
-      border-bottom: 1px solid var(--border);
-      z-index: 10;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
-    nav a {
-      color: var(--link);
-      margin-left: 1rem;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 6rem 1rem 4rem;
-      background-image: linear-gradient(180deg, var(--bg), var(--card));
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .hero p.tagline {
-      font-size: 1.25rem;
-      color: var(--muted);
-      max-width: 700px;
-      margin-bottom: 1rem;
-    }
-    .hero .cta {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background-color: var(--accent);
-      color: #fff;
-      border-radius: 0.375rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.2s;
-    }
-    .hero .cta:hover {
-      background-color: var(--link);
-    }
-    section {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-    h2 {
-      font-size: 1.75rem;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid var(--border);
-      padding-bottom: 0.5rem;
-    }
-    .pub-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .pub-item {
-      margin-bottom: 1.5rem;
-      background-color: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 0.5rem;
-      padding: 1rem;
-    }
-    .pub-item h3 {
-      margin-top: 0;
-      font-size: 1.1rem;
-    }
-    .pub-item p {
-      margin: 0.5rem 0 0;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-    }
-    .profile-img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid var(--border);
-      margin-bottom: 1.5rem;
-    }
-    @media (min-width: 768px) {
-      .hero h1 { font-size: 3rem; }
-      .hero p.tagline { font-size: 1.5rem; }
-    }
-  </style>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
+
 <body>
   <header>
-    <nav>
-      <div><strong>Joachim Bellet</strong></div>
-      <div>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#bio">Bio</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
+    <div class="container">
+      <nav>
+        <a href="#" class="nav-logo">Joachim Bellet</a>
+        <div class="nav-links">
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#bio">Bio</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
   </header>
+
   <main>
-    <section class="hero">
-      <img src="assets/portrait.jpg" alt="Portrait of Joachim Bellet" class="profile-img" />
-      <h1>Joachim Bellet</h1>
-      <p class="tagline">Neuroscientist investigating sensory memory, internal models and conscious perception</p>
-      <p>Post‑doctoral researcher in Markus Siegel’s laboratory at the
-        Magnetoencephalography (MEG) Centre, University of Tübingen. Previously I worked with Timo van Kerkoerle, Bechir Jarraya, Theofanis Panagiotaropoulos and Stanislas Dehaene at NeuroSpin (CEA/Paris‑Saclay).</p>
-      <a href="#contact" class="cta">Get in touch</a>
+    <section class="hero container">
+      <div class="hero-content">
+        <h1>Joachim Bellet</h1>
+        <p class="tagline">Neuroscientist investigating sensory memory, internal models and conscious perception</p>
+        <p>
+          Post‑doctoral researcher in Markus Siegel’s laboratory at the
+          Magnetoencephalography (MEG) Centre, University of Tübingen. Previously I worked with Timo van Kerkoerle,
+          Bechir Jarraya, Theofanis Panagiotaropoulos and Stanislas Dehaene at NeuroSpin (CEA/Paris‑Saclay).
+        </p>
+        <a href="#contact" class="cta-button">Get in touch</a>
+      </div>
+      <div class="hero-image-container">
+        <img src="assets/portrait.jpg" alt="Portrait of Joachim Bellet" class="profile-img" />
+      </div>
     </section>
 
-    <section id="research">
-      <h2>Research interests</h2>
+    <section id="research" class="container">
+      <h2>Research Interests</h2>
       <p>
         My work investigates the neural mechanisms that allow fleeting sensory inputs to be
         transformed into stable conscious experience. I use large-scale multi‑electrode
@@ -187,121 +69,163 @@
         memory traces, and build predictive internal models of the world. I am broadly
         interested in how these processes support perception, memory and decision making.
       </p>
-      <ul>
-        <li>
-          <strong>Decoding sensory representations.</strong>
-          Population activity in prefrontal cortex can reliably encode visual stimuli on
-          the order of tens of milliseconds. Even when perception is challenged by rapid
-          serial presentation, stimulus identity can be decoded early and fades as new
-          stimuli arrive【114942373471833†L306-L333】.
-        </li>
-        <li>
-          <strong>Internal models and predictive coding.</strong>
-          Prefrontal ensembles form overlapping representations that capture both the
-          identity of visual events and abstract sequence structure. These neural codes
-          reflect expectations, mismatches and updates—consistent with predictive coding
-          theories【682652431670720†L29-L66】.
-        </li>
-        <li>
-          <strong>Distortions in sensory memory.</strong>
-          Short‑term memory does not simply preserve high‑fidelity sensory input.
-          Studies of foveal vision reveal that remembered target locations are
-          systematically mislocalized, with the largest distortions for the most
-          central targets【728724067437846†L311-L324】. Such findings challenge the
-          assumption that sensory memory is a veridical copy and inform models of
-          perceptual stability.
-        </li>
-        <li>
-          <strong>Microsaccades and neural oscillations.</strong>
-          Tiny eye movements called microsaccades modulate neural activity and behavior.
-          In my Ph.D. work, I designed deep‑learning algorithms to detect these rare events
-          and showed that beta and alpha oscillations are locked to microsaccades generation,
-          leading to long modulations in contrast sensitivity and reaction times【944961400717940†L93-L160】. This work underscores how even subtle motor events can shape sensory processing.
-        </li>
-      </ul>
     </section>
 
-    <section id="publications">
-      <h2>Selected publications</h2>
-      <ul class="pub-list">
-        <li class="pub-item">
-          <h3>Spontaneously emerging internal models of visual sequences combine abstract and event‑specific information</h3>
-          <p><em>Cell Reports</em>, 2024 (with M.E. Bellet, M. Gay, B. Jarraya, S. Dehaene, T. van Kerkoerle &amp; T.I. Panagiotaropoulos)</p>
+    <section id="publications" class="container">
+      <h2>Recent Publications</h2>
+      <div class="pub-list">
+        <article class="pub-item">
+          <h3><a href="https://doi.org/10.1016/j.celrep.2024.113952" target="_blank" rel="noopener">Spontaneously
+              emerging internal models of visual sequences combine abstract and event‑specific information</a>
+          </h3>
+          <p class="pub-meta">Cell Reports, 2024 (with M.E. Bellet, M. Gay, B. Jarraya, S. Dehaene, T. van Kerkoerle
+            &amp; T.I. Panagiotaropoulos)</p>
           <p>
             We recorded neuronal populations in ventrolateral prefrontal cortex while macaques
             passively viewed visual sequences. The same neurons encoded both the specific
             images being shown and the abstract structure of the sequence; these representations
-            updated rapidly when a mismatch occurred and generalized across different sequences【604572266711707†L87-L110】.
+            updated rapidly when a mismatch occurred and generalized across different sequences.
           </p>
-        </li>
-        <li class="pub-item">
-          <h3>Decoding rapidly presented visual stimuli from prefrontal ensembles without report nor post‑perceptual processing</h3>
-          <p><em>Neuroscience of Consciousness</em>, 2022 (with M. Gay, A. Dwarakanath, B. Jarraya, T. van Kerkoerle, S. Dehaene &amp; T.I. Panagiotaropoulos)</p>
+        </article>
+
+        <article class="pub-item">
+          <h3><a href="https://doi.org/10.1093/nc/niac005" target="_blank" rel="noopener">Decoding rapidly presented
+              visual stimuli from prefrontal ensembles without report nor post‑perceptual
+              processing</a></h3>
+          <p class="pub-meta">Neuroscience of Consciousness, 2022 (with M. Gay, A. Dwarakanath, B. Jarraya, T. van
+            Kerkoerle, S. Dehaene &amp; T.I. Panagiotaropoulos)</p>
           <p>
             We demonstrated that ventrolateral prefrontal cortex population activity
-            reliably encodes the identity of visual stimuli within ~60 ms, even under
+            reliably encodes the identity of visual stimuli within ~60 ms, even under
             conditions that reduce post‑perceptual processing. Decoding accuracy
             drops as new stimuli appear, raising questions about whether this activity
-            reflects conscious access, phenomenal content or preconscious waves【114942373471833†L306-L333】.
+            reflects conscious access, phenomenal content or preconscious waves.
           </p>
-        </li>
-        <li class="pub-item">
-          <h3>Severe distortion in the representation of foveal visual image locations in short‑term memory</h3>
-          <p><em>Proceedings of the National Academy of Sciences</em>, 2022 (with K.F. Willeke, A.R. Cardenas &amp; Z.M. Hafed)</p>
+        </article>
+
+        <article class="pub-item">
+          <h3><a href="https://doi.org/10.1073/pnas.2121860119" target="_blank" rel="noopener">Severe distortion in the
+              representation of foveal visual image locations in short‑term memory</a></h3>
+          <p class="pub-meta">Proceedings of the National Academy of Sciences, 2022 (with K.F. Willeke, A.R. Cardenas
+            &amp; Z.M. Hafed)</p>
           <p>
             Contrary to the assumption that short‑term memory faithfully preserves
             high‑acuity foveal input, we discovered that remembered foveal targets
             are systematically mislocalized. The largest errors occurred for the
             most central targets, illustrating that the neural representation of
-            sensory memory can be surprisingly distorted【728724067437846†L311-L324】.
+            sensory memory can be surprisingly distorted.
           </p>
-        </li>
-      </ul>
+        </article>
+      </div>
     </section>
 
-    <section id="bio">
+    <section id="other-publications" class="container">
+      <h2>Other Publications</h2>
+      <div class="pub-list">
+        <article class="pub-item">
+          <h3><a href="https://doi.org/10.1152/jn.00754.2019" target="_blank" rel="noopener">Using deep neural networks
+              to detect complex spikes of cerebellar Purkinje cells</a></h3>
+          <p class="pub-meta">Journal of Neurophysiology, 2020 (with A. Markanday, M.E. Bellet, J. Inoue, Z.M. Hafed
+            &amp; P. Thier)</p>
+          <p>
+            We developed a deep learning algorithm to detect complex spikes in cerebellar Purkinje cells, which are
+            critical for motor learning but difficult to identify due to their complex waveforms. Our method matches
+            human expert performance in accuracy and duration estimation while being significantly faster.
+          </p>
+        </article>
+
+        <article class="pub-item">
+          <h3><a href="https://doi.org/10.1152/jn.00601.2018" target="_blank" rel="noopener">Human-level saccade
+              detection performance using deep neural networks</a></h3>
+          <p class="pub-meta">Journal of Neurophysiology, 2019 (with M.E. Bellet, H. Nienborg, Z.M. Hafed &amp; P.
+            Berens)</p>
+          <p>
+            We introduced U'n'Eye, a convolutional neural network for saccade detection that achieves human-level
+            accuracy even for challenging eye movements like microsaccades. This open-source tool outperforms existing
+            methods and facilitates robust analysis of eye movement data.
+          </p>
+        </article>
+
+        <article class="pub-item">
+          <h3><a href="https://doi.org/10.1038/s41467-019-11711-x" target="_blank" rel="noopener">Memory-guided
+              microsaccades</a></h3>
+          <p class="pub-meta">Nature Communications, 2019 (with K.F. Willeke, X. Tian, A. Buonocore, A. Ramirez-Cardenas
+            &amp; Z.M. Hafed)</p>
+          <p>
+            We demonstrated that microsaccades, often thought to be involuntary, can be generated on demand to
+            remembered locations. These memory-guided microsaccades are precise, associated with distinct neural
+            activity in the superior colliculus, and reveal a link between oculomotor control and working memory.
+          </p>
+        </article>
+
+        <article class="pub-item">
+          <h3><a href="https://doi.org/10.1152/jn.00253.2017" target="_blank" rel="noopener">Sequential hemifield gating
+              of α- and β-behavioral performance oscillations after microsaccades</a></h3>
+          <p class="pub-meta">Journal of Neurophysiology, 2017 (with C.Y. Chen &amp; Z.M. Hafed)</p>
+          <p>
+            We found that microsaccades trigger long-lasting, rhythmic oscillations in visual detection performance in
+            the alpha and beta frequency bands. These oscillations are sequentially pulsed across visual hemifields,
+            suggesting that microsaccades temporally organize visual processing in a direction-dependent manner.
+          </p>
+        </article>
+
+        <article class="pub-item">
+          <h3><a href="https://doi.org/10.1016/j.neuropharm.2016.04.016" target="_blank" rel="noopener">Role for
+              serotonin2A (5-HT2A) and 2C (5-HT2C) receptors in experimental absence seizures</a></h3>
+          <p class="pub-meta">Neuropharmacology, 2016 (with M. Venzi, F. David, A. Cavaccini, C. Bombardi, V. Crunelli
+            &amp; G. Di Giovanni)</p>
+          <p>
+            We investigated the role of serotonin receptors in a rat model of absence epilepsy. We found that activating
+            5-HT2A and 5-HT2C receptors suppresses absence seizures, suggesting that these receptors exert a negative
+            control over seizure generation and could be targets for new anti-epileptic drugs.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="bio" class="container">
       <h2>Biography</h2>
       <p>
-        I am a neuroscientist fascinated by how the brain builds internal representations of the world. I received my Ph.D. in
-        systems neuroscience at the Werner Reichardt Centre for Integrative Neuroscience, University of Tübingen, where I worked
-        with Ziad M. Hafed on microsaccades, neural oscillations and machine‑learning methods for detecting rare events.
-        Following my doctorate I joined the Cognitive Neuroimaging Unit at NeuroSpin (CEA/Paris‑Saclay) to collaborate with
-        Theofanis Panagiotaropoulos, Timo van Kerkoerle, Bechir Jarraya and Stanislas Dehaene on prefrontal neural codes and internal models. Since November 2022
-        I have been a post‑doctoral researcher in Markus Siegel’s laboratory at the Magnetoencephalography (MEG) Centre of the
-        University of Tübingen. My long‑term research aims to understand how transient sensory inputs and memory traces interact
+        I am a neuroscientist fascinated by how the brain builds internal representations of the world. I received my
+        Ph.D. in
+        systems neuroscience at the Werner Reichardt Centre for Integrative Neuroscience, University of Tübingen, where
+        I worked
+        with Ziad M. Hafed on microsaccades, neural oscillations and machine‑learning methods for detecting rare events.
+        Following my doctorate I joined the Cognitive Neuroimaging Unit at NeuroSpin (CEA/Paris‑Saclay) to collaborate
+        with
+        Timo van Kerkoerle, Bechir Jarraya, Theofanis Panagiotaropoulos, and Stanislas Dehaene on prefrontal neural
+        codes and internal models. Since November 2022
+        I have been a post‑doctoral researcher in Markus Siegel’s laboratory at the Magnetoencephalography (MEG) Centre
+        of the
+        University of Tübingen. My long‑term research aims to understand how transient sensory inputs and memory traces
+        interact
         to generate stable conscious experience and behavior.
       </p>
       <p>
-        Outside of the lab, I enjoy exploring cultural life, engaging in science outreach and mentoring younger scientists.
+        Outside of the lab, I enjoy exploring cultural life, engaging in science outreach and mentoring younger
+        scientists.
       </p>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="container">
       <h2>Contact</h2>
       <p>
         I welcome collaboration and scientific discussions. Feel free to email me at
-        <a href="mailto:joachim.bellet@cin.uni-tuebingen.de">joachim.bellet@cin.uni-tuebingen.de</a>. You can also follow my open-source work on
+        <a href="mailto:joachim.bellet@cin.uni-tuebingen.de">joachim.bellet@cin.uni-tuebingen.de</a>. You can also
+        follow my open-source work on
         <a href="https://github.com/jobellet" target="_blank" rel="noopener">GitHub</a>, or connect on
         <a href="https://www.linkedin.com/in/joachim-bellet-449a1483" target="_blank" rel="noopener">LinkedIn</a>.
-        I am always interested in collaborations and discussions about neural coding,
-        sensory memory and consciousness.
       </p>
     </section>
   </main>
+
   <footer>
-    &copy; 2025 Joachim Bellet. All rights reserved.
+    <div class="container">
+      &copy; 2025 Joachim Bellet. All rights reserved.
+    </div>
   </footer>
-  <script>
-    // optional: smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-  </script>
+
+  <script src="assets/script.js"></script>
 </body>
+
 </html>
