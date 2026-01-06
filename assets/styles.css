@@ -272,3 +272,70 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Timeline (Experience & Education) */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  position: relative;
+  padding-left: var(--space-md);
+  border-left: 2px solid var(--border-color);
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * var(--space-md) - 5px);
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--accent-primary);
+  border: 2px solid var(--bg-primary);
+}
+
+.timeline-date {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.timeline-content h3 {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+}
+
+.timeline-lab {
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+/* Talks List */
+.talk-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.talk-list li {
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.talk-list li:last-child {
+  border-bottom: none;
+}
+
+.talk-list strong {
+  color: var(--text-primary);
+}
