@@ -13,10 +13,17 @@
   <meta property="og:title" content="Joachim Bellet – Neuroscience, Memory & Consciousness" />
   <meta property="og:description"
     content="Homepage of Joachim Bellet, neuroscientist investigating sensory memory, internal models and conscious perception." />
-  <meta property="og:image" content="assets/og-card.jpg" />
+  <meta property="og:image" content="https://jobellet.github.io/assets/portrait.jpg" />
   <meta property="og:type" content="website" />
 
-  <link rel="icon" href="assets/favicon.ico" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Joachim Bellet – Neuroscience, Memory & Consciousness" />
+  <meta name="twitter:description" content="Homepage of Joachim Bellet, neuroscientist investigating sensory memory, internal models and conscious perception." />
+  <meta name="twitter:image" content="https://jobellet.github.io/assets/portrait.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,11 +37,15 @@
 <body>
   <header>
     <div class="container">
-      <nav>
+      <nav aria-label="Main navigation">
         <a href="#" class="nav-logo">Joachim Bellet</a>
-        <div class="nav-links">
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+          <span class="hamburger"></span>
+        </button>
+        <div class="nav-links" id="nav-links">
           <a href="#research">Research</a>
           <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
           <a href="#publications">Publications</a>
           <a href="#talks">Talks</a>
           <a href="#bio">Bio</a>
@@ -152,6 +163,34 @@
             <p class="timeline-lab">UPMC, France</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container">
+      <h2>Side Projects</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3><a href="https://github.com/jobellet/ADHDtools" target="_blank" rel="noopener noreferrer">ADHD Tools Hub</a></h3>
+          <p>A day planner for ADHD users that shows one task at a time.</p>
+          <p class="project-meta"><a href="https://jobellet.github.io/ADHDtools/" target="_blank" rel="noopener noreferrer">Live Demo</a></p>
+        </article>
+
+        <article class="project-card">
+          <h3><a href="https://github.com/jobellet/research-assistant" target="_blank" rel="noopener noreferrer">Research Assistant</a></h3>
+          <p>A self-hosted research workstation for managing PDFs, exploring literature, and editing LaTeX drafts.</p>
+        </article>
+
+        <article class="project-card">
+          <h3><a href="https://github.com/jobellet/paper2audio" target="_blank" rel="noopener noreferrer">paper2audio</a></h3>
+          <p>Converts scientific PDFs to audio with one chapter per section. Runs in Colab, Kaggle or on your own computer.</p>
+          <p class="project-meta"><a href="https://colab.research.google.com/github/jobellet/paper2audio/blob/main/notebooks/paper2audio_colab.ipynb" target="_blank" rel="noopener noreferrer">Open in Colab</a></p>
+        </article>
+
+        <article class="project-card">
+          <h3><a href="https://github.com/jobellet/uneye" target="_blank" rel="noopener noreferrer">U'n'Eye</a></h3>
+          <p>Tools to detect and label saccades, microsaccades, and blinks. Extends the original U'n'Eye (Bellet et al., 2019) with web and Android labelers.</p>
+          <p class="project-meta"><a href="https://jobellet.github.io/uneye/" target="_blank" rel="noopener noreferrer">Web Labeler</a></p>
+        </article>
       </div>
     </section>
 
