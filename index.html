@@ -3,424 +3,729 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joachim Bellet – Neuroscience, Memory & Consciousness</title>
   <meta name="description"
-    content="Homepage of Joachim Bellet, neuroscientist investigating sensory memory, internal models and conscious perception." />
+    content="Joachim Bellet is a neuroscientist at the University of Tübingen investigating sensory memory, internal models and conscious perception in the prefrontal cortex." />
+  <meta name="author" content="Joachim Bellet" />
+  <link rel="canonical" href="https://jobellet.github.io/" />
+  <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Joachim Bellet – Neuroscience, Memory & Consciousness" />
   <meta property="og:description"
-    content="Homepage of Joachim Bellet, neuroscientist investigating sensory memory, internal models and conscious perception." />
-  <meta property="og:image" content="https://jobellet.github.io/assets/portrait.jpg" />
-  <meta property="og:type" content="website" />
+    content="Neuroscientist investigating sensory memory, internal models and conscious perception." />
+  <meta property="og:url" content="https://jobellet.github.io/" />
+  <meta property="og:image" content="https://jobellet.github.io/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:type" content="profile" />
+  <meta property="profile:first_name" content="Joachim" />
+  <meta property="profile:last_name" content="Bellet" />
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Joachim Bellet – Neuroscience, Memory & Consciousness" />
-  <meta name="twitter:description" content="Homepage of Joachim Bellet, neuroscientist investigating sensory memory, internal models and conscious perception." />
-  <meta name="twitter:image" content="https://jobellet.github.io/assets/portrait.jpg" />
+  <meta name="twitter:description" content="Neuroscientist investigating sensory memory, internal models and conscious perception." />
+  <meta name="twitter:image" content="https://jobellet.github.io/assets/og-image.jpg" />
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <link rel="apple-touch-icon" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/portrait-square.jpg" />
+
+  <!-- Structured data for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Joachim Bellet",
+    "url": "https://jobellet.github.io/",
+    "image": "https://jobellet.github.io/assets/portrait-square.jpg",
+    "jobTitle": "Postdoctoral Researcher",
+    "email": "mailto:joachim.bellet@cin.uni-tuebingen.de",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "MEG Centre, University of Tübingen"
+    },
+    "alumniOf": [
+      { "@type": "Organization", "name": "University of Tübingen" },
+      { "@type": "Organization", "name": "Pierre et Marie Curie University" }
+    ],
+    "knowsAbout": ["Neuroscience", "Prefrontal cortex", "Visual perception", "Working memory", "Consciousness", "Electrophysiology", "Machine learning"],
+    "knowsLanguage": ["en", "fr", "de"],
+    "sameAs": [
+      "https://orcid.org/0000-0002-3028-1726",
+      "https://github.com/jobellet",
+      "https://www.linkedin.com/in/joachim-bellet-449a1483"
+    ]
+  }
+  </script>
+
+  <!-- Apply saved theme before first paint (avoids a flash of the wrong theme) -->
+  <script>
+    try {
+      const t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    } catch (e) { }
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap"
+    rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 
 <body>
-  <header>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm-1 1 9 7 9-7"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+    <symbol id="i-orcid" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24ZM7.37 5.4a.94.94 0 1 1 0 1.88.94.94 0 0 1 0-1.88Zm-.72 3.06h1.44v10.03H6.65V8.46Zm3.56 0h3.9c3.7 0 5.33 2.65 5.33 5.02 0 2.58-2.01 5.02-5.32 5.02h-3.91V8.46Zm1.44 1.3v7.43h2.3c3.26 0 4.01-2.48 4.01-3.71 0-2.02-1.29-3.72-4.1-3.72h-2.2Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></g></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></symbol>
+  </svg>
+
+  <header class="site-header">
     <div class="container">
       <nav aria-label="Main navigation">
-        <a href="#" class="nav-logo">Joachim Bellet</a>
-        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
-          <span class="hamburger"></span>
-        </button>
+        <a href="#top" class="nav-logo" aria-label="Joachim Bellet – back to top">
+          <span class="nav-logo-mark" aria-hidden="true">JB</span>
+          <span class="nav-logo-text">Joachim Bellet</span>
+        </a>
         <div class="nav-links" id="nav-links">
           <a href="#research">Research</a>
-          <a href="#experience">Experience</a>
+          <a href="#career">Career</a>
           <a href="#publications">Publications</a>
-          <a href="#projects">Side Projects</a>
+          <a href="#projects">Projects</a>
           <a href="#talks">Talks</a>
-          <a href="#bio">Bio</a>
+          <a href="#bio">About</a>
           <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-actions">
+          <button class="icon-button theme-toggle" type="button" aria-label="Switch colour theme">
+            <svg class="icon icon-sun"><use href="#i-sun" /></svg>
+            <svg class="icon icon-moon"><use href="#i-moon" /></svg>
+          </button>
+          <button class="icon-button mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+            aria-controls="nav-links">
+            <span class="hamburger"></span>
+          </button>
         </div>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero container">
-      <div class="hero-content">
-        <h1>Joachim Bellet</h1>
-        <p class="tagline">Neuroscientist investigating sensory memory, internal models and conscious perception</p>
-        <p>
-          Post‑doctoral researcher in Markus Siegel’s laboratory at the
-          Magnetoencephalography (MEG) Centre, University of Tübingen. Previously I worked with Timo van Kerkoerle,
-          Bechir Jarraya, Theofanis Panagiotaropoulos and Stanislas Dehaene at NeuroSpin (CEA/Paris‑Saclay).
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="eyebrow">Postdoctoral researcher · University of Tübingen</p>
+          <h1>Joachim Bellet</h1>
+          <p class="tagline">I study how the brain turns fleeting sensory inputs into stable perception, memory and
+            conscious experience.</p>
+          <p class="hero-text">
+            Post‑doctoral researcher in Markus Siegel’s laboratory at the Magnetoencephalography (MEG) Centre,
+            University of Tübingen. Previously I worked with Timo van Kerkoerle, Bechir Jarraya, Theofanis
+            Panagiotaropoulos and Stanislas Dehaene at NeuroSpin (CEA/Paris‑Saclay).
+          </p>
+          <div class="hero-actions">
+            <a href="mailto:joachim.bellet@cin.uni-tuebingen.de" class="button button-primary">
+              <svg class="icon"><use href="#i-mail" /></svg> Get in touch
+            </a>
+            <a href="#publications" class="button button-ghost">See publications</a>
+          </div>
+          <ul class="social-links" aria-label="Profiles">
+            <li><a href="https://orcid.org/0000-0002-3028-1726" target="_blank" rel="noopener" aria-label="ORCID"
+                title="ORCID"><svg class="icon"><use href="#i-orcid" /></svg></a></li>
+            <li><a href="https://github.com/jobellet" target="_blank" rel="noopener" aria-label="GitHub"
+                title="GitHub"><svg class="icon"><use href="#i-github" /></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/joachim-bellet-449a1483" target="_blank" rel="noopener"
+                aria-label="LinkedIn" title="LinkedIn"><svg class="icon"><use href="#i-linkedin" /></svg></a></li>
+          </ul>
+        </div>
+        <div class="hero-image-container">
+          <picture>
+            <source srcset="assets/portrait-square.webp" type="image/webp" />
+            <img src="assets/portrait-square.jpg" alt="Joachim Bellet presenting a poster at a conference"
+              class="profile-img" width="640" height="640" fetchpriority="high" />
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">01</p>
+          <h2>Research Interests</h2>
+        </div>
+        <p class="lead">
+          My work investigates the neural mechanisms that allow fleeting sensory inputs to be
+          transformed into stable conscious experience. I use large-scale multi‑electrode
+          recordings in non‑human primates to decode how ensembles of neurons in the
+          ventrolateral prefrontal cortex encode visual stimuli, maintain short‑term
+          memory traces, and build predictive internal models of the world. I am broadly
+          interested in how these processes support perception, memory and decision making.
         </p>
-        <a href="mailto:joachim.bellet@cin.uni-tuebingen.de" class="cta-button">Get in touch</a>
-      </div>
-      <div class="hero-image-container">
-        <img src="assets/portrait.jpg" alt="Portrait of Joachim Bellet" class="profile-img" />
-      </div>
-    </section>
-
-    <section id="research" class="container">
-      <h2>Research Interests</h2>
-      <p>
-        My work investigates the neural mechanisms that allow fleeting sensory inputs to be
-        transformed into stable conscious experience. I use large-scale multi‑electrode
-        recordings in non‑human primates to decode how ensembles of neurons in the
-        ventrolateral prefrontal cortex encode visual stimuli, maintain short‑term
-        memory traces, and build predictive internal models of the world. I am broadly
-        interested in how these processes support perception, memory and decision making.
-      </p>
-    </section>
-
-    <section id="experience" class="container">
-      <h2>Professional Experience</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-date">Nov 2022 – Present</div>
-          <div class="timeline-content">
-            <h3>Postdoc</h3>
-            <p class="timeline-lab">Magnetoencephalography (MEG) Centre, Tübingen, Germany (Lab of Markus Siegel)</p>
-            <p>Investigating brain structures associated with temporary working memory dysfunction.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">Nov 2019 – Nov 2022</div>
-          <div class="timeline-content">
-            <h3>Postdoc</h3>
-            <p class="timeline-lab">CEA, NeuroSpin, Unicog, Gif-sur-Yvette, France (Lab of Stanislas Dehaene, Team of Timo van Kerkoerle)</p>
-            <p>Investigating the prefrontal cortex's role in vision and oddball detection.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">July 2014 – July 2019</div>
-          <div class="timeline-content">
-            <h3>PhD in Neuroscience</h3>
-            <p class="timeline-lab">Centre for Integrative Neuroscience, Tübingen, Germany (Lab of Ziad Hafed)</p>
-            <p>Developing deep learning-based solutions for the detection of events in noisy time series signals. Revealing phase locking of brain oscillations to microsaccades generation.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">Oct 2013, Jan – June 2014</div>
-          <div class="timeline-content">
-            <h3>Internship</h3>
-            <p class="timeline-lab">School of Bioscience, Cardiff, UK (Lab of Vincenzo Crunelli)</p>
-            <p>Testing the effects of various serotonin agonists on absence seizures in epileptic rats.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">April – June 2013</div>
-          <div class="timeline-content">
-            <h3>Internship</h3>
-            <p class="timeline-lab">Centre for Integrative Neuroscience, Tübingen, Germany (Lab of Andreas Bartels)</p>
-            <p>EEG recording and psychophysics in humans.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">July 2012</div>
-          <div class="timeline-content">
-            <h3>Internship</h3>
-            <p class="timeline-lab">Saint-Anne Hospital, Paris, France (Lab of Oussama Kebir)</p>
-            <p>Investigating potential genetic markers in schizophrenia.</p>
-          </div>
+        <div class="theme-grid">
+          <article class="theme-card">
+            <h3>Visual perception in prefrontal cortex</h3>
+            <p>How prefrontal neuronal ensembles represent what we see, from a coarse first sweep to rich
+              representations, within tens of milliseconds.</p>
+          </article>
+          <article class="theme-card">
+            <h3>Internal models &amp; prediction</h3>
+            <p>How the brain learns the structure of visual sequences and detects when expectations are
+              violated.</p>
+          </article>
+          <article class="theme-card">
+            <h3>Sensory &amp; working memory</h3>
+            <p>How short‑term memory traces are kept, and how they distort what we remember.</p>
+          </article>
+          <article class="theme-card">
+            <h3>Machine learning for neuroscience</h3>
+            <p>Deep learning tools that detect rare but relevant events in noisy signals, such as saccades and
+              complex spikes.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="education" class="container">
-      <h2>Education</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-date">2015 – 2019</div>
-          <div class="timeline-content">
-            <h3>PhD in Neuroscience</h3>
-            <p class="timeline-lab">Centre for Integrative Neuroscience, Tübingen, Germany</p>
-            <p>Dissertation: “Detecting Rare but Relevant Events in Systems Neuroscience” (magna cum laude)</p>
+    <section id="career" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">02</p>
+          <h2>Career</h2>
+        </div>
+        <div class="career-grid">
+          <div>
+            <h3 class="subhead">Professional Experience</h3>
+            <ol class="timeline">
+              <li class="timeline-item is-current">
+                <p class="timeline-date">Nov 2022 – Present</p>
+                <h4>Postdoc</h4>
+                <p class="timeline-lab">Magnetoencephalography (MEG) Centre, Tübingen, Germany (Lab of Markus Siegel)</p>
+                <p>Investigating brain structures associated with temporary working memory dysfunction.</p>
+              </li>
+              <li class="timeline-item">
+                <p class="timeline-date">Nov 2019 – Nov 2022</p>
+                <h4>Postdoc</h4>
+                <p class="timeline-lab">CEA, NeuroSpin, Unicog, Gif-sur-Yvette, France (Lab of Stanislas Dehaene, Team of
+                  Timo van Kerkoerle)</p>
+                <p>Investigating the prefrontal cortex's role in vision and oddball detection.</p>
+              </li>
+              <li class="timeline-item">
+                <p class="timeline-date">July 2014 – July 2019</p>
+                <h4>PhD in Neuroscience</h4>
+                <p class="timeline-lab">Centre for Integrative Neuroscience, Tübingen, Germany (Lab of Ziad Hafed)</p>
+                <p>Developing deep learning-based solutions for the detection of events in noisy time series signals.
+                  Revealing phase locking of brain oscillations to microsaccades generation.</p>
+              </li>
+              <li class="timeline-item">
+                <p class="timeline-date">Oct 2013, Jan – June 2014</p>
+                <h4>Internship</h4>
+                <p class="timeline-lab">School of Bioscience, Cardiff, UK (Lab of Vincenzo Crunelli)</p>
+                <p>Testing the effects of various serotonin agonists on absence seizures in epileptic rats.</p>
+              </li>
+              <li class="timeline-item">
+                <p class="timeline-date">April – June 2013</p>
+                <h4>Internship</h4>
+                <p class="timeline-lab">Centre for Integrative Neuroscience, Tübingen, Germany (Lab of Andreas Bartels)</p>
+                <p>EEG recording and psychophysics in humans.</p>
+              </li>
+              <li class="timeline-item">
+                <p class="timeline-date">July 2012</p>
+                <h4>Internship</h4>
+                <p class="timeline-lab">Saint-Anne Hospital, Paris, France (Lab of Oussama Kebir)</p>
+                <p>Investigating potential genetic markers in schizophrenia.</p>
+              </li>
+            </ol>
+          </div>
+          <div>
+            <h3 class="subhead" id="education">Education</h3>
+            <ol class="timeline">
+              <li class="timeline-item">
+                <p class="timeline-date">2015 – 2019</p>
+                <h4>PhD in Neuroscience</h4>
+                <p class="timeline-lab">Centre for Integrative Neuroscience, Tübingen, Germany</p>
+                <p>Dissertation: “Detecting Rare but Relevant Events in Systems Neuroscience” (magna cum laude)</p>
+              </li>
+              <li class="timeline-item">
+                <p class="timeline-date">2012 – 2014</p>
+                <h4>Master of Integrative Biology and Physiology</h4>
+                <p class="timeline-lab">Pierre et Marie Curie University (UPMC, Paris 6), France</p>
+              </li>
+              <li class="timeline-item">
+                <p class="timeline-date">2009 – 2012</p>
+                <h4>Bachelor’s Degree in Life Sciences</h4>
+                <p class="timeline-lab">UPMC, France</p>
+              </li>
+            </ol>
+            <div class="facts">
+              <h3 class="subhead">Languages</h3>
+              <ul class="chip-list">
+                <li>English</li>
+                <li>French</li>
+                <li>German</li>
+              </ul>
+              <h3 class="subhead">Methods</h3>
+              <ul class="chip-list">
+                <li>Multi‑electrode recordings</li>
+                <li>MEG</li>
+                <li>EEG &amp; psychophysics</li>
+                <li>Population decoding</li>
+                <li>Deep learning</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-date">2012 – 2014</div>
-          <div class="timeline-content">
-            <h3>Master of Integrative Biology and Physiology</h3>
-            <p class="timeline-lab">Pierre et Marie Curie University (UPMC, Paris 6), France</p>
-          </div>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">03</p>
+          <h2>Publications</h2>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-date">2009 – 2012</div>
-          <div class="timeline-content">
-            <h3>Bachelor’s Degree in Life Sciences</h3>
-            <p class="timeline-lab">UPMC, France</p>
-          </div>
+
+        <h3 class="subhead">Recent</h3>
+        <div class="pub-list">
+          <article class="pub-item">
+            <div class="pub-year">2026</div>
+            <div class="pub-body">
+              <h4><a href="https://www.biorxiv.org/content/10.64898/2026.03.27.714202.abstract" target="_blank"
+                  rel="noopener">From Coarse to Rich: Successive Waves of Visual Perception in Prefrontal Cortex</a></h4>
+              <p class="pub-meta"><span class="pub-venue">bioRxiv</span> <span class="badge">Preprint</span></p>
+              <p class="pub-authors">with Markus Siegel, Stanislas Dehaene, Bechir Jarraya, Theofanis I.
+                Panagiotaropoulos &amp; Timo van Kerkoerle</p>
+              <details>
+                <summary>Summary</summary>
+                <p>The ventrolateral prefrontal cortex (vlPFC) is well known for its involvement in high-level functions
+                  such as cognitive control and language. However, vlPFC’s role in visual processing is less clear.
+                  Here, we investigated how neuronal ensembles in the vlPFC dynamically encode different types of
+                  visual information. We found that the vlPFC processes visual information in two stages. First, an
+                  “early” response from 50 to 90 ms after stimulus onset encodes the low spatial frequency component of
+                  an image. Then, from 100 ms on, the representational geometry changes and contains much richer
+                  information.</p>
+              </details>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <div class="pub-year">2024</div>
+            <div class="pub-body">
+              <h4><a href="https://doi.org/10.1016/j.celrep.2024.113952" target="_blank" rel="noopener">Spontaneously
+                  emerging internal models of visual sequences combine abstract and event‑specific information</a></h4>
+              <p class="pub-meta"><span class="pub-venue">Cell Reports</span></p>
+              <p class="pub-authors">with M.E. Bellet, M. Gay, B. Jarraya, S. Dehaene, T. van Kerkoerle &amp; T.I.
+                Panagiotaropoulos</p>
+              <details>
+                <summary>Summary</summary>
+                <p>We recorded neuronal populations in ventrolateral prefrontal cortex while macaques passively viewed
+                  visual sequences. The same neurons encoded both the specific images being shown and the abstract
+                  structure of the sequence; these representations updated rapidly when a mismatch occurred and
+                  generalized across different sequences.</p>
+              </details>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <div class="pub-year">2022</div>
+            <div class="pub-body">
+              <h4><a href="https://doi.org/10.1093/nc/niac005" target="_blank" rel="noopener">Decoding rapidly
+                  presented visual stimuli from prefrontal ensembles without report nor post‑perceptual processing</a>
+              </h4>
+              <p class="pub-meta"><span class="pub-venue">Neuroscience of Consciousness</span></p>
+              <p class="pub-authors">with M. Gay, A. Dwarakanath, B. Jarraya, T. van Kerkoerle, S. Dehaene &amp; T.I.
+                Panagiotaropoulos</p>
+              <details>
+                <summary>Summary</summary>
+                <p>We demonstrated that ventrolateral prefrontal cortex population activity reliably encodes the
+                  identity of visual stimuli within ~60 ms, even under conditions that reduce post‑perceptual
+                  processing. Decoding accuracy drops as new stimuli appear, raising questions about whether this
+                  activity reflects conscious access, phenomenal content or preconscious waves.</p>
+              </details>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <div class="pub-year">2022</div>
+            <div class="pub-body">
+              <h4><a href="https://doi.org/10.1073/pnas.2121860119" target="_blank" rel="noopener">Severe distortion in
+                  the representation of foveal visual image locations in short‑term memory</a></h4>
+              <p class="pub-meta"><span class="pub-venue">Proceedings of the National Academy of Sciences</span></p>
+              <p class="pub-authors">with K.F. Willeke, A.R. Cardenas &amp; Z.M. Hafed</p>
+              <details>
+                <summary>Summary</summary>
+                <p>Contrary to the assumption that short‑term memory faithfully preserves high‑acuity foveal input, we
+                  discovered that remembered foveal targets are systematically mislocalized. The largest errors
+                  occurred for the most central targets, illustrating that the neural representation of sensory memory
+                  can be surprisingly distorted.</p>
+              </details>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="subhead" id="other-publications">Earlier</h3>
+        <div class="pub-list">
+          <article class="pub-item">
+            <div class="pub-year">2020</div>
+            <div class="pub-body">
+              <h4><a href="https://doi.org/10.1152/jn.00754.2019" target="_blank" rel="noopener">Using deep neural
+                  networks to detect complex spikes of cerebellar Purkinje cells</a></h4>
+              <p class="pub-meta"><span class="pub-venue">Journal of Neurophysiology</span></p>
+              <p class="pub-authors">with A. Markanday, M.E. Bellet, J. Inoue, Z.M. Hafed &amp; P. Thier</p>
+              <details>
+                <summary>Summary</summary>
+                <p>We developed a deep learning algorithm to detect complex spikes in cerebellar Purkinje cells, which
+                  are critical for motor learning but difficult to identify due to their complex waveforms. Our method
+                  matches human expert performance in accuracy and duration estimation while being significantly
+                  faster.</p>
+              </details>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <div class="pub-year">2019</div>
+            <div class="pub-body">
+              <h4><a href="https://doi.org/10.1152/jn.00601.2018" target="_blank" rel="noopener">Human-level saccade
+                  detection performance using deep neural networks</a></h4>
+              <p class="pub-meta"><span class="pub-venue">Journal of Neurophysiology</span>
+                <a class="badge badge-link" href="https://github.com/jobellet/uneye" target="_blank"
+                  rel="noopener">Code</a>
+              </p>
+              <p class="pub-authors">with M.E. Bellet, H. Nienborg, Z.M. Hafed &amp; P. Berens</p>
+              <details>
+                <summary>Summary</summary>
+                <p>We introduced U'n'Eye, a convolutional neural network for saccade detection that achieves
+                  human-level accuracy even for challenging eye movements like microsaccades. This open-source tool
+                  outperforms existing methods and facilitates robust analysis of eye movement data.</p>
+              </details>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <div class="pub-year">2019</div>
+            <div class="pub-body">
+              <h4><a href="https://doi.org/10.1038/s41467-019-11711-x" target="_blank" rel="noopener">Memory-guided
+                  microsaccades</a></h4>
+              <p class="pub-meta"><span class="pub-venue">Nature Communications</span></p>
+              <p class="pub-authors">with K.F. Willeke, X. Tian, A. Buonocore, A. Ramirez-Cardenas &amp; Z.M. Hafed</p>
+              <details>
+                <summary>Summary</summary>
+                <p>We demonstrated that microsaccades, often thought to be involuntary, can be generated on demand to
+                  remembered locations. These memory-guided microsaccades are precise, associated with distinct neural
+                  activity in the superior colliculus, and reveal a link between oculomotor control and working
+                  memory.</p>
+              </details>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <div class="pub-year">2017</div>
+            <div class="pub-body">
+              <h4><a href="https://doi.org/10.1152/jn.00253.2017" target="_blank" rel="noopener">Sequential hemifield
+                  gating of α- and β-behavioral performance oscillations after microsaccades</a></h4>
+              <p class="pub-meta"><span class="pub-venue">Journal of Neurophysiology</span></p>
+              <p class="pub-authors">with C.Y. Chen &amp; Z.M. Hafed</p>
+              <details>
+                <summary>Summary</summary>
+                <p>We found that microsaccades trigger long-lasting, rhythmic oscillations in visual detection
+                  performance in the alpha and beta frequency bands. These oscillations are sequentially pulsed across
+                  visual hemifields, suggesting that microsaccades temporally organize visual processing in a
+                  direction-dependent manner.</p>
+              </details>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <div class="pub-year">2016</div>
+            <div class="pub-body">
+              <h4><a href="https://doi.org/10.1016/j.neuropharm.2016.04.016" target="_blank" rel="noopener">Role for
+                  serotonin2A (5-HT2A) and 2C (5-HT2C) receptors in experimental absence seizures</a></h4>
+              <p class="pub-meta"><span class="pub-venue">Neuropharmacology</span></p>
+              <p class="pub-authors">with M. Venzi, F. David, A. Cavaccini, C. Bombardi, V. Crunelli &amp; G. Di
+                Giovanni</p>
+              <details>
+                <summary>Summary</summary>
+                <p>We investigated the role of serotonin receptors in a rat model of absence epilepsy. We found that
+                  activating 5-HT2A and 5-HT2C receptors suppresses absence seizures, suggesting that these receptors
+                  exert a negative control over seizure generation and could be targets for new anti-epileptic
+                  drugs.</p>
+              </details>
+            </div>
+          </article>
+        </div>
+        <p class="more-link">
+          Full record on <a href="https://orcid.org/0000-0002-3028-1726" target="_blank" rel="noopener">ORCID</a>.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">04</p>
+          <h2>Side Projects</h2>
+        </div>
+        <p class="section-intro">Open-source tools I build in my spare time.</p>
+        <div class="project-grid">
+          <article class="project-card">
+            <h3><a href="https://github.com/jobellet/ADHDtools" target="_blank" rel="noopener noreferrer">ADHD Tools
+                Hub</a></h3>
+            <p>A day planner for ADHD users that shows one task at a time.</p>
+            <p class="project-links">
+              <a href="https://jobellet.github.io/ADHDtools/" target="_blank" rel="noopener noreferrer">Live demo
+                <svg class="icon icon-sm"><use href="#i-arrow" /></svg></a>
+              <a href="https://github.com/jobellet/ADHDtools" target="_blank" rel="noopener noreferrer">Source
+                <svg class="icon icon-sm"><use href="#i-arrow" /></svg></a>
+            </p>
+          </article>
+
+          <article class="project-card">
+            <h3><a href="https://github.com/jobellet/research-assistant" target="_blank"
+                rel="noopener noreferrer">Research Assistant</a></h3>
+            <p>A self-hosted research workstation for managing PDFs, exploring literature, and editing LaTeX drafts.</p>
+            <p class="project-links">
+              <a href="https://github.com/jobellet/research-assistant" target="_blank" rel="noopener noreferrer">Source
+                <svg class="icon icon-sm"><use href="#i-arrow" /></svg></a>
+            </p>
+          </article>
+
+          <article class="project-card">
+            <h3><a href="https://github.com/jobellet/paper2audio" target="_blank" rel="noopener noreferrer">paper2audio</a>
+            </h3>
+            <p>Converts scientific PDFs to audio with one chapter per section. Runs in Colab, Kaggle or on your own
+              computer.</p>
+            <p class="project-links">
+              <a href="https://colab.research.google.com/github/jobellet/paper2audio/blob/main/notebooks/paper2audio_colab.ipynb"
+                target="_blank" rel="noopener noreferrer">Open in Colab
+                <svg class="icon icon-sm"><use href="#i-arrow" /></svg></a>
+              <a href="https://github.com/jobellet/paper2audio" target="_blank" rel="noopener noreferrer">Source
+                <svg class="icon icon-sm"><use href="#i-arrow" /></svg></a>
+            </p>
+          </article>
+
+          <article class="project-card">
+            <h3><a href="https://github.com/jobellet/uneye" target="_blank" rel="noopener noreferrer">U'n'Eye</a></h3>
+            <p>Tools to detect and label saccades, microsaccades, and blinks. Extends the original U'n'Eye (Bellet et
+              al., 2019) with web and Android labelers.</p>
+            <p class="project-links">
+              <a href="https://jobellet.github.io/uneye/" target="_blank" rel="noopener noreferrer">Web labeler
+                <svg class="icon icon-sm"><use href="#i-arrow" /></svg></a>
+              <a href="https://github.com/jobellet/uneye" target="_blank" rel="noopener noreferrer">Source
+                <svg class="icon icon-sm"><use href="#i-arrow" /></svg></a>
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-
-    <section id="publications" class="container">
-      <h2>Recent Publications</h2>
-      <div class="pub-list">
-        <article class="pub-item">
-          <h3><a href="https://www.biorxiv.org/content/10.64898/2026.03.27.714202.abstract" target="_blank" rel="noopener">From Coarse to Rich: Successive Waves of Visual Perception in Prefrontal Cortex</a>
-          </h3>
-          <p class="pub-meta">bioRxiv, 2026 (with Markus Siegel, Stanislas Dehaene, Bechir Jarraya, Theofanis I. Panagiotaropoulos &amp; Timo van Kerkoerle)</p>
-          <p>
-            The ventrolateral prefrontal cortex (vlPFC) is well known for its involvement in high-level functions such as cognitive control and language. However, vlPFC’s role in visual processing is less clear. Here, we investigated how neuronal ensembles in the vlPFC dynamically encode different types of visual information. We found that the vlPFC processes visual information in two stages. First, an “early” response from 50 to 90 ms after stimulus onset encodes the low spatial frequency component of an image. Then, from 100 ms on, the representational geometry changes and contains much richer information.
-          </p>
-        </article>
-
-        <article class="pub-item">
-          <h3><a href="https://doi.org/10.1016/j.celrep.2024.113952" target="_blank" rel="noopener">Spontaneously
-              emerging internal models of visual sequences combine abstract and event‑specific information</a>
-          </h3>
-          <p class="pub-meta">Cell Reports, 2024 (with M.E. Bellet, M. Gay, B. Jarraya, S. Dehaene, T. van Kerkoerle
-            &amp; T.I. Panagiotaropoulos)</p>
-          <p>
-            We recorded neuronal populations in ventrolateral prefrontal cortex while macaques
-            passively viewed visual sequences. The same neurons encoded both the specific
-            images being shown and the abstract structure of the sequence; these representations
-            updated rapidly when a mismatch occurred and generalized across different sequences.
-          </p>
-        </article>
-
-        <article class="pub-item">
-          <h3><a href="https://doi.org/10.1093/nc/niac005" target="_blank" rel="noopener">Decoding rapidly presented
-              visual stimuli from prefrontal ensembles without report nor post‑perceptual
-              processing</a></h3>
-          <p class="pub-meta">Neuroscience of Consciousness, 2022 (with M. Gay, A. Dwarakanath, B. Jarraya, T. van
-            Kerkoerle, S. Dehaene &amp; T.I. Panagiotaropoulos)</p>
-          <p>
-            We demonstrated that ventrolateral prefrontal cortex population activity
-            reliably encodes the identity of visual stimuli within ~60 ms, even under
-            conditions that reduce post‑perceptual processing. Decoding accuracy
-            drops as new stimuli appear, raising questions about whether this activity
-            reflects conscious access, phenomenal content or preconscious waves.
-          </p>
-        </article>
-
-        <article class="pub-item">
-          <h3><a href="https://doi.org/10.1073/pnas.2121860119" target="_blank" rel="noopener">Severe distortion in the
-              representation of foveal visual image locations in short‑term memory</a></h3>
-          <p class="pub-meta">Proceedings of the National Academy of Sciences, 2022 (with K.F. Willeke, A.R. Cardenas
-            &amp; Z.M. Hafed)</p>
-          <p>
-            Contrary to the assumption that short‑term memory faithfully preserves
-            high‑acuity foveal input, we discovered that remembered foveal targets
-            are systematically mislocalized. The largest errors occurred for the
-            most central targets, illustrating that the neural representation of
-            sensory memory can be surprisingly distorted.
-          </p>
-        </article>
+    <section id="talks" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">05</p>
+          <h2>Talks and Posters</h2>
+        </div>
+        <ol class="talk-list">
+          <li class="talk">
+            <span class="talk-year">2023</span>
+            <div>
+              <p class="talk-title"><span class="badge">Poster</span> Dynamic selectivity of visual features in macaque
+                monkey prefrontal cortex: A comparative analysis with deep neural networks.</p>
+              <p class="talk-venue">Systems Neuroscience Symposium, Tübingen, Germany</p>
+              <p class="talk-authors"><strong>Joachim Bellet</strong>, Béchir Jarraya, Stanislas Dehaene, Theofanis
+                Panagiotaropoulos, and Timo van Kerkoerle</p>
+            </div>
+          </li>
+          <li class="talk">
+            <span class="talk-year">2023</span>
+            <div>
+              <p class="talk-title"><span class="badge">Poster</span> Dynamic selectivity of visual features in macaque
+                monkey prefrontal cortex: A comparative analysis with deep neural networks.</p>
+              <p class="talk-venue">Neuro-AI-Talks, Osnabrück, Germany</p>
+              <p class="talk-authors"><strong>Joachim Bellet</strong>, Béchir Jarraya, Stanislas Dehaene, Theofanis
+                Panagiotaropoulos, and Timo van Kerkoerle</p>
+            </div>
+          </li>
+          <li class="talk">
+            <span class="talk-year">2023</span>
+            <div>
+              <p class="talk-title"><span class="badge badge-accent">Talk</span> Decoding rapidly presented visual
+                stimuli from prefrontal ensembles without report nor post-perceptual processing.</p>
+              <p class="talk-venue">CIN-NIPS-Asia Pacific symposium, Tübingen, Germany</p>
+              <p class="talk-authors"><strong>Joachim Bellet</strong>, Marion Gay, Abilash Dwarakanath, Béchir Jarraya,
+                Timo van Kerkoerle, Stanislas Dehaene, and Theofanis Panagiotaropoulos</p>
+            </div>
+          </li>
+          <li class="talk">
+            <span class="talk-year">2022</span>
+            <div>
+              <p class="talk-title"><span class="badge">Poster</span> Decoding rapidly presented visual stimuli from
+                prefrontal ensembles without report nor post-perceptual processing.</p>
+              <p class="talk-venue">FENS meeting, Paris, France</p>
+              <p class="talk-authors"><strong>Joachim Bellet</strong>, Marion Gay, Abilash Dwarakanath, Béchir Jarraya,
+                Timo van Kerkoerle, Stanislas Dehaene, and Theofanis Panagiotaropoulos</p>
+            </div>
+          </li>
+          <li class="talk">
+            <span class="talk-year">2022</span>
+            <div>
+              <p class="talk-title"><span class="badge">Poster</span> Decoding rapidly presented visual stimuli from
+                prefrontal ensembles without report nor post-perceptual processing.</p>
+              <p class="talk-venue">Symposium “From Cortical Microcircuits to Consciousness” (CORTICON), Paris, France</p>
+              <p class="talk-authors"><strong>Joachim Bellet</strong>, Marion Gay, Abilash Dwarakanath, Béchir Jarraya,
+                Timo van Kerkoerle, Stanislas Dehaene, and Theofanis Panagiotaropoulos</p>
+            </div>
+          </li>
+          <li class="talk">
+            <span class="talk-year">2019</span>
+            <div>
+              <p class="talk-title"><span class="badge">Poster</span> Using deep neural networks to detect complex spikes
+                of cerebellar Purkinje Cells.</p>
+              <p class="talk-venue">12th Primate Neurobiology Meeting, Göttingen, Germany</p>
+              <p class="talk-authors">Akshay Markanday, <strong>Joachim Bellet</strong>, Marie Estelle Bellet, Ziad M.
+                Hafed, and Peter Thier</p>
+            </div>
+          </li>
+          <li class="talk">
+            <span class="talk-year">2018</span>
+            <div>
+              <p class="talk-title"><span class="badge badge-accent">Talk</span> Human-level saccade detection
+                performance using deep neural networks.</p>
+              <p class="talk-venue">M3 satellite conference of the 11th Primate Neurobiology Meeting, Tübingen,
+                Germany</p>
+              <p class="talk-authors">Marie E. Bellet, <strong>Joachim Bellet</strong>, Hendrikje Nienborg, Ziad M.
+                Hafed, and Philipp Berens</p>
+            </div>
+          </li>
+          <li class="talk">
+            <span class="talk-year">2018</span>
+            <div>
+              <p class="talk-title"><span class="badge">Poster</span> Human-level saccade detection performance using
+                deep neural networks.</p>
+              <p class="talk-venue">ZüMüTü meeting, Zürich, Switzerland</p>
+              <p class="talk-authors">Marie E. Bellet, <strong>Joachim Bellet</strong>, Hendrikje Nienborg, Ziad M.
+                Hafed, and Philipp Berens</p>
+            </div>
+          </li>
+          <li class="talk">
+            <span class="talk-year">2016</span>
+            <div>
+              <p class="talk-title"><span class="badge">Poster</span> Sequential hemifield gating of 8–15 Hz behavioral
+                performance oscillations after microsaccades generation.</p>
+              <p class="talk-venue">SfN meeting, San Diego, California</p>
+              <p class="talk-authors"><strong>Joachim Bellet</strong> and Ziad M. Hafed</p>
+            </div>
+          </li>
+          <li class="talk">
+            <span class="talk-year">2016</span>
+            <div>
+              <p class="talk-title"><span class="badge">Poster</span> Phase-locking of behavioral fluctuations to
+                microsaccade generation.</p>
+              <p class="talk-venue">VSS meeting, St. Pete Beach, Florida</p>
+              <p class="talk-authors"><strong>Joachim Bellet</strong> and Ziad M. Hafed</p>
+            </div>
+          </li>
+          <li class="talk">
+            <span class="talk-year">2015</span>
+            <div>
+              <p class="talk-title"><span class="badge badge-accent">Talk</span> Phase-locking of behavioral
+                fluctuations to microsaccade generation.</p>
+              <p class="talk-venue">NeNa meeting, Schramberg, Germany</p>
+              <p class="talk-authors"><strong>Joachim Bellet</strong> and Ziad M. Hafed</p>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <section id="other-publications" class="container">
-      <h2>Other Publications</h2>
-      <div class="pub-list">
-        <article class="pub-item">
-          <h3><a href="https://doi.org/10.1152/jn.00754.2019" target="_blank" rel="noopener">Using deep neural networks
-              to detect complex spikes of cerebellar Purkinje cells</a></h3>
-          <p class="pub-meta">Journal of Neurophysiology, 2020 (with A. Markanday, M.E. Bellet, J. Inoue, Z.M. Hafed
-            &amp; P. Thier)</p>
+    <section id="bio" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">06</p>
+          <h2>Biography</h2>
+        </div>
+        <div class="prose">
           <p>
-            We developed a deep learning algorithm to detect complex spikes in cerebellar Purkinje cells, which are
-            critical for motor learning but difficult to identify due to their complex waveforms. Our method matches
-            human expert performance in accuracy and duration estimation while being significantly faster.
+            I am a neuroscientist holding a PhD in Neuroscience with extensive postdoctoral experience in
+            electrophysiology. I have a proven track record in developing and applying advanced machine learning
+            techniques for event detection in noisy time-series signals. My passion lies in bridging preclinical and
+            clinical research to improve mental health and drive translational outcomes.
           </p>
-        </article>
-
-        <article class="pub-item">
-          <h3><a href="https://doi.org/10.1152/jn.00601.2018" target="_blank" rel="noopener">Human-level saccade
-              detection performance using deep neural networks</a></h3>
-          <p class="pub-meta">Journal of Neurophysiology, 2019 (with M.E. Bellet, H. Nienborg, Z.M. Hafed &amp; P.
-            Berens)</p>
           <p>
-            We introduced U'n'Eye, a convolutional neural network for saccade detection that achieves human-level
-            accuracy even for challenging eye movements like microsaccades. This open-source tool outperforms existing
-            methods and facilitates robust analysis of eye movement data.
+            I received my Ph.D. in systems neuroscience at the Werner Reichardt Centre for Integrative Neuroscience,
+            University of Tübingen, where I worked with Ziad M. Hafed on microsaccades, neural oscillations and
+            machine‑learning methods for detecting rare events. Following my doctorate I joined the Cognitive
+            Neuroimaging Unit at NeuroSpin (CEA/Paris‑Saclay) to collaborate with Timo van Kerkoerle, Bechir Jarraya,
+            Theofanis Panagiotaropoulos, and Stanislas Dehaene on prefrontal neural codes and internal models. Since
+            November 2022 I have been a post‑doctoral researcher in Markus Siegel’s laboratory at the
+            Magnetoencephalography (MEG) Centre of the University of Tübingen. My long‑term research aims to understand
+            how transient sensory inputs and memory traces interact to generate stable conscious experience and
+            behavior.
           </p>
-        </article>
-
-        <article class="pub-item">
-          <h3><a href="https://doi.org/10.1038/s41467-019-11711-x" target="_blank" rel="noopener">Memory-guided
-              microsaccades</a></h3>
-          <p class="pub-meta">Nature Communications, 2019 (with K.F. Willeke, X. Tian, A. Buonocore, A. Ramirez-Cardenas
-            &amp; Z.M. Hafed)</p>
           <p>
-            We demonstrated that microsaccades, often thought to be involuntary, can be generated on demand to
-            remembered locations. These memory-guided microsaccades are precise, associated with distinct neural
-            activity in the superior colliculus, and reveal a link between oculomotor control and working memory.
+            <strong>Languages:</strong> Fluent in English, French, and German.
           </p>
-        </article>
-
-        <article class="pub-item">
-          <h3><a href="https://doi.org/10.1152/jn.00253.2017" target="_blank" rel="noopener">Sequential hemifield gating
-              of α- and β-behavioral performance oscillations after microsaccades</a></h3>
-          <p class="pub-meta">Journal of Neurophysiology, 2017 (with C.Y. Chen &amp; Z.M. Hafed)</p>
-          <p>
-            We found that microsaccades trigger long-lasting, rhythmic oscillations in visual detection performance in
-            the alpha and beta frequency bands. These oscillations are sequentially pulsed across visual hemifields,
-            suggesting that microsaccades temporally organize visual processing in a direction-dependent manner.
-          </p>
-        </article>
-
-        <article class="pub-item">
-          <h3><a href="https://doi.org/10.1016/j.neuropharm.2016.04.016" target="_blank" rel="noopener">Role for
-              serotonin2A (5-HT2A) and 2C (5-HT2C) receptors in experimental absence seizures</a></h3>
-          <p class="pub-meta">Neuropharmacology, 2016 (with M. Venzi, F. David, A. Cavaccini, C. Bombardi, V. Crunelli
-            &amp; G. Di Giovanni)</p>
-          <p>
-            We investigated the role of serotonin receptors in a rat model of absence epilepsy. We found that activating
-            5-HT2A and 5-HT2C receptors suppresses absence seizures, suggesting that these receptors exert a negative
-            control over seizure generation and could be targets for new anti-epileptic drugs.
-          </p>
-        </article>
+        </div>
       </div>
     </section>
 
-    <section id="projects" class="container">
-      <h2>Side Projects</h2>
-      <div class="project-grid">
-        <article class="project-card">
-          <h3><a href="https://github.com/jobellet/ADHDtools" target="_blank" rel="noopener noreferrer">ADHD Tools Hub</a></h3>
-          <p>A day planner for ADHD users that shows one task at a time.</p>
-          <p class="project-meta"><a href="https://jobellet.github.io/ADHDtools/" target="_blank" rel="noopener noreferrer">Live Demo</a></p>
-        </article>
-
-        <article class="project-card">
-          <h3><a href="https://github.com/jobellet/research-assistant" target="_blank" rel="noopener noreferrer">Research Assistant</a></h3>
-          <p>A self-hosted research workstation for managing PDFs, exploring literature, and editing LaTeX drafts.</p>
-        </article>
-
-        <article class="project-card">
-          <h3><a href="https://github.com/jobellet/paper2audio" target="_blank" rel="noopener noreferrer">paper2audio</a></h3>
-          <p>Converts scientific PDFs to audio with one chapter per section. Runs in Colab, Kaggle or on your own computer.</p>
-          <p class="project-meta"><a href="https://colab.research.google.com/github/jobellet/paper2audio/blob/main/notebooks/paper2audio_colab.ipynb" target="_blank" rel="noopener noreferrer">Open in Colab</a></p>
-        </article>
-
-        <article class="project-card">
-          <h3><a href="https://github.com/jobellet/uneye" target="_blank" rel="noopener noreferrer">U'n'Eye</a></h3>
-          <p>Tools to detect and label saccades, microsaccades, and blinks. Extends the original U'n'Eye (Bellet et al., 2019) with web and Android labelers.</p>
-          <p class="project-meta"><a href="https://jobellet.github.io/uneye/" target="_blank" rel="noopener noreferrer">Web Labeler</a></p>
-        </article>
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">07</p>
+          <h2>Contact</h2>
+        </div>
+        <p class="section-intro">I welcome collaboration and scientific discussions.</p>
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:joachim.bellet@cin.uni-tuebingen.de">
+            <svg class="icon icon-lg"><use href="#i-mail" /></svg>
+            <span class="contact-label">Email</span>
+            <span class="contact-value">joachim.bellet@cin.uni-tuebingen.de</span>
+          </a>
+          <a class="contact-card" href="https://orcid.org/0000-0002-3028-1726" target="_blank" rel="noopener">
+            <svg class="icon icon-lg"><use href="#i-orcid" /></svg>
+            <span class="contact-label">ORCID iD</span>
+            <span class="contact-value">0000-0002-3028-1726</span>
+          </a>
+          <a class="contact-card" href="https://github.com/jobellet" target="_blank" rel="noopener">
+            <svg class="icon icon-lg"><use href="#i-github" /></svg>
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">@jobellet</span>
+          </a>
+          <a class="contact-card" href="https://www.linkedin.com/in/joachim-bellet-449a1483" target="_blank"
+            rel="noopener">
+            <svg class="icon icon-lg"><use href="#i-linkedin" /></svg>
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">Joachim Bellet</span>
+          </a>
+        </div>
+        <address class="postal">
+          MEG Centre, University of Tübingen, Germany
+        </address>
       </div>
-    </section>
-
-    <section id="talks" class="container">
-      <h2>Talks and Posters</h2>
-      <ul class="talk-list">
-        <li>
-          <strong>Joachim Bellet</strong>, Béchir Jarraya, Stanislas Dehaene, Theofanis Panagiotaropoulos, and Timo van Kerkoerle.
-          Dynamic selectivity of visual features in macaque monkey prefrontal cortex: A comparative analysis with deep neural networks.
-          <em>Poster at Systems Neuroscience Symposium, Tübingen, Germany, 2023</em>
-        </li>
-        <li>
-          <strong>Joachim Bellet</strong>, Béchir Jarraya, Stanislas Dehaene, Theofanis Panagiotaropoulos, and Timo van Kerkoerle.
-          Dynamic selectivity of visual features in macaque monkey prefrontal cortex: A comparative analysis with deep neural networks.
-          <em>Poster at Neuro-AI-Talks, Osnabrück, Germany, 2023</em>
-        </li>
-        <li>
-          <strong>Joachim Bellet</strong>, Marion Gay, Abilash Dwarakanath, Béchir Jarraya, Timo van Kerkoerle, Stanislas Dehaene, and Theofanis Panagiotaropoulos.
-          “Decoding rapidly presented visual stimuli from prefrontal ensembles without report nor post-perceptual processing.”
-          <em>Talk at CIN-NIPS-Asia Pacific symposium, Tübingen, Germany, 2023.</em>
-        </li>
-        <li>
-          <strong>Joachim Bellet</strong>, Marion Gay, Abilash Dwarakanath, Béchir Jarraya, Timo van Kerkoerle, Stanislas Dehaene, and Theofanis Panagiotaropoulos.
-          “Decoding rapidly presented visual stimuli from prefrontal ensembles without report nor post-perceptual processing.”
-          <em>Poster at FENS meeting, Paris, France, 2022.</em>
-        </li>
-        <li>
-          <strong>Joachim Bellet</strong>, Marion Gay, Abilash Dwarakanath, Béchir Jarraya, Timo van Kerkoerle, Stanislas Dehaene, and Theofanis Panagiotaropoulos.
-          “Decoding rapidly presented visual stimuli from prefrontal ensembles without report nor post-perceptual processing.”
-          <em>Poster at the Symposium "From Cortical Microcircuits to Consciousness" (CORTICON), Paris, France, 2022.</em>
-        </li>
-        <li>
-          Markanday, Akshay, <strong>Joachim Bellet</strong>, Marie Estelle Bellet, Ziad M. Hafed, and Peter Thier.
-          "Using deep neural networks to detect complex spikes of cerebellar Purkinje Cells."
-          <em>Poster at the 12th Primate Neurobiology Meeting, Göttingen, Germany, 2019.</em>
-        </li>
-        <li>
-          Bellet, Marie E., <strong>Joachim Bellet</strong>, Hendrikje Nienborg, Ziad M. Hafed, and Philipp Berens.
-          "Human-level saccade detection performance using deep neural networks."
-          <em>Talk at the M3 satellite conference of the 11th Primate Neurobiology Meeting, Tübingen, Germany, 2018.</em>
-        </li>
-        <li>
-          Bellet, Marie E., <strong>Joachim Bellet</strong>, Hendrikje Nienborg, Ziad M. Hafed, and Philipp Berens.
-          "Human-level saccade detection performance using deep neural networks."
-          <em>Poster at the ZüMüTü meeting, Zürich, Switzerland, 2018.</em>
-        </li>
-        <li>
-          <strong>Bellet, Joachim</strong>, and Ziad M. Hafed.
-          "Sequential hemifield gating of 8-15 hz behavioral performance oscillations after microsaccades generation.”
-          <em>Poster at SfN meeting, San Diego, California 2016</em>
-        </li>
-        <li>
-          <strong>Bellet, Joachim</strong>, and Ziad M. Hafed.
-          "Phase-locking of behavioral fluctuations to microsaccade generation.”
-          <em>Poster at VSS meeting, St. Pete Beach, Florida 2016</em>
-        </li>
-        <li>
-          <strong>Bellet, Joachim</strong>, and Ziad M. Hafed.
-          "Phase-locking of behavioral fluctuations to microsaccade generation.”
-          <em>Talk at NeNa meeting, Schramberg, Germany 2015</em>
-        </li>
-      </ul>
-    </section>
-
-    <section id="bio" class="container">
-      <h2>Biography</h2>
-      <p>
-        I am a neuroscientist holding a PhD in Neuroscience with extensive postdoctoral experience in electrophysiology.
-        I have a proven track record in developing and applying advanced machine learning techniques for event detection in
-        noisy time-series signals. My passion lies in bridging preclinical and clinical research to improve mental health
-        and drive translational outcomes.
-      </p>
-      <p>
-        I received my Ph.D. in systems neuroscience at the Werner Reichardt Centre for Integrative Neuroscience, University of
-        Tübingen, where I worked with Ziad M. Hafed on microsaccades, neural oscillations and machine‑learning methods for
-        detecting rare events. Following my doctorate I joined the Cognitive Neuroimaging Unit at NeuroSpin (CEA/Paris‑Saclay)
-        to collaborate with Timo van Kerkoerle, Bechir Jarraya, Theofanis Panagiotaropoulos, and Stanislas Dehaene on prefrontal
-        neural codes and internal models. Since November 2022 I have been a post‑doctoral researcher in Markus Siegel’s
-        laboratory at the Magnetoencephalography (MEG) Centre of the University of Tübingen. My long‑term research aims to
-        understand how transient sensory inputs and memory traces interact to generate stable conscious experience and behavior.
-      </p>
-      <p>
-        <strong>Languages:</strong> Fluent in English, French, and German.
-      </p>
-    </section>
-
-    <section id="contact" class="container">
-      <h2>Contact</h2>
-      <p>
-        I welcome collaboration and scientific discussions. Feel free to email me at
-        <a href="mailto:joachim.bellet@cin.uni-tuebingen.de">joachim.bellet@cin.uni-tuebingen.de</a>. You can also
-        follow my open-source work on
-        <a href="https://github.com/jobellet" target="_blank" rel="noopener">GitHub</a>, or connect on
-        <a href="https://www.linkedin.com/in/joachim-bellet-449a1483" target="_blank" rel="noopener">LinkedIn</a>.
-      </p>
-      <p>
-        <strong>ORCID iD:</strong> 0000-0002-3028-1726
-      </p>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      &copy; 2025 Joachim Bellet. All rights reserved.
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Joachim Bellet</p>
+      <a href="#top" class="back-to-top">Back to top ↑</a>
     </div>
   </footer>
 
-  <script src="assets/script.js"></script>
+  <script src="assets/script.js" defer></script>
 </body>
 
 </html>
